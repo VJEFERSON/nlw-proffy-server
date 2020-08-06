@@ -11,7 +11,6 @@ export default class ClassesService {
             const week_day = filters.week_day as string;
             const time = filters.time as string;
             const timeInMinutes = converteHourToMinutes(time);
-            console.log(timeInMinutes);
 
             const classes = await database('classes')
                 .select('classes.*', 'users.*')
